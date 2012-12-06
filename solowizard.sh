@@ -25,6 +25,7 @@ recipes:
 - pivotal_workstation::bash_profile-git_completion
 - pivotal_workstation::bash_profile-no_sudo_gem_install
 - pivotal_workstation::bash_profile-ps1
+- se-dev-box::rvm
 - pivotal_workstation::chrome
 - pivotal_workstation::create_var_chef_cache
 - pivotal_workstation::dropbox
@@ -54,6 +55,7 @@ recipes:
 - se-dev-box::bashrc-source_bashprofile
 - se-dev-box::coreutils
 - se-dev-box::emacs
+- se-dev-box::bash_profile-emacs_pager
 - se-dev-box::google-drive
 - se-dev-box::git_config_global_defaults
 - se-dev-box::node_packages
