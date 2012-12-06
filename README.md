@@ -24,4 +24,4 @@ Attributes
 Usage
 =====
 
-Run `solowizard.sh`.
+    $ bash < <(curl -s https://raw.github.com/SealedEnvelope/se-dev-box/master/solowizard.sh)
