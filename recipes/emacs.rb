@@ -1,4 +1,4 @@
-include_recipe "se::bash_profile-emacs_pager"
+include_recipe "se-dev-box::bash_profile-emacs_pager"
 
 dmg_package "Emacs" do
   app "Emacs"
