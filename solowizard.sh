@@ -57,6 +57,7 @@ recipes:
 - se-dev-box::emacs
 - se-dev-box::bash_profile-emacs_pager
 - se-dev-box::google-drive
+- se-dev-box::google-voice
 - se-dev-box::git_config_global_defaults
 - se-dev-box::node_packages
 - se-dev-box::pandoc
