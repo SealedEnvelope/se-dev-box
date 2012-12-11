@@ -41,6 +41,7 @@ recipes:
 - pivotal_workstation::user_owns_usr_local
 - pivotal_workstation::vagrant
 - pivotal_workstation::virtualbox
+- se-dev-box::bash_profile-user_bin_path
 - se-dev-box::bash_profile-bundler-exec
 - se-dev-box::bash_profile-locale_vars
 - se-dev-box::bashrc-source_bashprofile
