@@ -44,6 +44,7 @@ recipes:
 - se-dev-box::bash_profile-user_bin_path
 - se-dev-box::bash_profile-bundler-exec
 - se-dev-box::bash_profile-locale_vars
+- se-dev-box::bash_profile-vagrant_helpers
 - se-dev-box::bashrc-source_bashprofile
 - se-dev-box::coreutils
 - se-dev-box::emacs
