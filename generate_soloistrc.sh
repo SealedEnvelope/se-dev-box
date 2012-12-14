@@ -54,6 +54,7 @@ recipes:
 - se-dev-box::git_config_global_defaults
 - se-dev-box::node_packages
 - se-dev-box::pandoc
+- se-dev-box::phantomjs
 - se-dev-box::boxcryptor
 node_attributes:
   pandoc:
