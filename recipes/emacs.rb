@@ -1,4 +1,4 @@
-include_recipe "se-dev-box::bash_profile-emacs_pager"
+pivotal_workstation_bash_it_custom_plugin "emacs-pager.bash"
 
 dmg_package "Emacs" do
   app "Emacs"

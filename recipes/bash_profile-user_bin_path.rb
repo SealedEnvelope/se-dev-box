@@ -1,1 +1,0 @@
-pivotal_workstation_bash_profile_include "user_bin_path"

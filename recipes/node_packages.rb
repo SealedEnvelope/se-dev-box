@@ -1,4 +1,4 @@
-include_recipe "se-dev-box::bash_profile-node_bin_path"
+pivotal_workstation_bash_it_custom_plugin "npm_bin_path.bash"
 
 execute "install uglify-js" do
   command "npm install -g uglify-js"

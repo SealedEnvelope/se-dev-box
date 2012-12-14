@@ -7,13 +7,15 @@ Requirements
 ============
 
 - Mountain Lion.
-- [Xcode command line tools](https://developer.apple.com/downloads/index.action).
+- [Xcode command line tools](https://developer.apple.com/downloads/index.action) (or full Xcode install - untested).
 
-Replace /usr/bin/xcrun with:
+If using Xcode command line tools, replace /usr/bin/xcrun with:
 
     #!/bin/bash
     $@
     exit 0
+
+and cross fingers.
 
 Attributes
 ==========

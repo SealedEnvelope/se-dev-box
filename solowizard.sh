@@ -13,15 +13,10 @@ fi
 
 mkdir -p ~/cookbooks; cd ~/cookbooks
 
-# need to merge w/ pivotal changes
 if [[ -d pivotal_workstation ]]; then
-  # cd pivotal_workstation && git pull && cd ..
-  cd pivotal_workstation && cd ..
+  cd pivotal_workstation && git pull && cd ..
 else
   git clone https://github.com/pivotal/pivotal_workstation.git
-  cd pivotal_workstation
-  git checkout fcf33b4d5b5f0715cd7945e200819ab095112be0
-  cd ..
 fi
 if [[ -d dmg ]]; then
   cd dmg && git pull && cd ..
