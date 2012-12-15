@@ -1,4 +1,12 @@
-pivotal_workstation_bash_it_custom_plugin "emacs-pager.bash"
+pivotal_workstation_bash_it_custom_plugin "emacs.bash"
+
+# don't want these loaded automatically by bash_it, only if in emacs
+bash_it_custom_dir = ::File.join(::BASH_IT_DIR, "custom")
+template ::File.expand_path("emacs_shell_prompt.sh", bash_it_custom_dir) do
+  source "emacs_shell_prompt.sh"
+  owner WS_USER
+  only_if { ::File.directory?(bash_it_custom_dir) }
+end
 
 dmg_package "Emacs" do
   app "Emacs"
