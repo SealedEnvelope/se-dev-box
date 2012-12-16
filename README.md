@@ -30,7 +30,7 @@ Usage
 
 This will create a `~/cookbooks/soloistrc` file listing the recipes that will be installed. Review the list of recipes, then:
 
-    $ bash < <(curl -s https://raw.github.com/SealedEnvelope/se-dev-box/master/se-dev-box)
+    $ ruby < <(curl -s https://raw.github.com/SealedEnvelope/se-dev-box/master/installer)
 
 This installs the [soloist](https://github.com/mkocher/soloist) gem, clones
 
