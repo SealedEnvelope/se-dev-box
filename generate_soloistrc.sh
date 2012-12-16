@@ -35,6 +35,7 @@ recipes:
 - pivotal_workstation::vagrant
 - pivotal_workstation::virtualbox
 - pivotal_workstation::xquartz
+- se-dev-box::bash_it-plugins
 - se-dev-box::bash_it-bundler-exec
 - se-dev-box::bash_it-fix_prompt
 - se-dev-box::bash_it-home_bin_path
