@@ -1,0 +1,1 @@
+[ -d /usr/local/sbin ] && export PATH=$PATH:/usr/local/sbin
