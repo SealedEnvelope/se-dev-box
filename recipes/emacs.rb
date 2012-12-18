@@ -4,7 +4,7 @@ pivotal_workstation_bash_it_custom_plugin "emacs.bash"
 bash_it_custom_dir = ::File.join(::BASH_IT_DIR, "custom")
 template ::File.expand_path("emacs_shell_prompt.sh", bash_it_custom_dir) do
   source "emacs_shell_prompt.sh"
-  owner WS_USER
+  owner node[:current_user]
   only_if { ::File.directory?(bash_it_custom_dir) }
 end
 

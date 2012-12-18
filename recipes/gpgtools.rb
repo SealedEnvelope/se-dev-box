@@ -8,6 +8,6 @@ dmg_package "GPGTools" do
 end
 
 execute "your current user owns ~/.gnupg" do
-  command "chown -R #{WS_USER} #{ENV["HOME"]}/.gnupg"
+  command "chown -R #{node[:current_user]} #{ENV["HOME"]}/.gnupg"
   only_if { File.exists?("#{ENV["HOME"]}/.gnupg") }
 end
