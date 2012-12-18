@@ -5,6 +5,7 @@ remote_file basictex_path do
 end
 execute "install BasicTeX" do
   command "sudo installer -pkg '/#{basictex_path}' -target /"
+  not_if { File.exists?("/usr/texbin/pdflatex") }
 end
 
 dmg_package "pandoc-#{node[:pandoc][:version]}" do
@@ -14,4 +15,5 @@ dmg_package "pandoc-#{node[:pandoc][:version]}" do
   volumes_dir "pandoc #{node[:pandoc][:version]}"
   checksum node[:pandoc][:checksum]
   action :install
+  not_if { File.exists?("/usr/local/bin/pandoc") }
 end

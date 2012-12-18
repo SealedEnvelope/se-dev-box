@@ -29,6 +29,7 @@ recipes:
 - pivotal_workstation::node_js
 - pivotal_workstation::screen_sharing_app
 - pivotal_workstation::set_finder_show_all_hd_on_desktop
+- pivotal_workstation::skype
 - pivotal_workstation::sshd_on
 - pivotal_workstation::unix_essentials
 - pivotal_workstation::user_owns_usr_local
@@ -51,6 +52,7 @@ recipes:
 - se-dev-box::pandoc
 - se-dev-box::phantomjs
 - se-dev-box::boxcryptor
+- se-dev-box::gpgtools
 node_attributes:
   pandoc:
     version: 1.9.4.2
