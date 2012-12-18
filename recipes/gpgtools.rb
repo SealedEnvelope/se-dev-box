@@ -6,3 +6,8 @@ dmg_package "GPGTools" do
   action :install
   not_if { File.exists?("/usr/local/MacGPG2/") }
 end
+
+execute "your current user owns ~/.gnupg" do
+  command "chown -R #{WS_USER} #{ENV["HOME"]}/.gnupg"
+  only_if { File.exists?("#{ENV["HOME"]}/.gnupg") }
+end
