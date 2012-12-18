@@ -55,6 +55,13 @@ recipes:
 - se-dev-box::boxcryptor
 - se-dev-box::gpgtools
 node_attributes:
+  git:
+    user_name:
+    user_email:
+    user_signingkey:
+  github:
+    user:
+    token:
   pandoc:
     version: 1.9.4.2
     checksum: b42338e36feb93b521a49abd4fd97090dbe833ae8c537feb2e4ba33a9a75be66

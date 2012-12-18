@@ -1,96 +1,44 @@
 include_recipe "pivotal_workstation::git"
 
-execute "set alias st=status" do
-  command "git config --global alias.st 'status -sb'"
-  user WS_USER
+configure_git = lambda do |key, value|
+  execute "git configure #{key}" do
+    user user
+    command "git config --global #{key} #{value}"
+    not_if "[[ $(git config --global --get #{key}) = #{value} ]]"
+  end
 end
 
-execute "set alias di=diff" do
-  command "git config --global alias.di diff"
-  user WS_USER
-end
+configure_git["user.name", '"' + node[:git][:user_name] + '"'] if node[:git][:user_name]
+configure_git["user.email", node[:git][:user_email]] if node[:git][:user_email]
+configure_git["user.signingkey", node[:git][:user_signingkey]] if node[:git][:user_signingkey]
 
-execute "set alias co=checkout" do
-  command "git config --global alias.co checkout"
-  user WS_USER
-end
+configure_git["github.user", '"' + node[:github][:user] + '"'] if node[:github][:user]
+configure_git["github.token", node[:github][:token]] if node[:github][:token]
 
-execute "set alias ci=commit" do
-  command "git config --global alias.ci commit"
-  user WS_USER
-end
+configure_git["alias.st", "'status -sb'"]
+configure_git["alias.di", "diff"]
+configure_git["alias.co", "checkout"]
+configure_git["alias.ci", "commit"]
+configure_git["alias.br", "branch"]
+configure_git["alias.logwithtags", "'log --decorate=full'"]
+configure_git["alias.lg", "'log --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset\" --abbrev-commit --date=relative'"]
+configure_git["alias.lsig", "'log --show-signature'"]
+configure_git["alias.last", "'log -1 --pretty=\"%H\"'"]
+configure_git["alias.hist", "'log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short'"]
+configure_git["alias.rm-all", "'! git ls-files --deleted | xargs git rm'"]
 
-execute "set alias br=branch" do
-  command "git config --global alias.br branch"
-  user WS_USER
-end
+configure_git["color.branch", "auto"]
+configure_git["color.diff", "auto"]
+configure_git["color.interactive", "auto"]
+configure_git["color.status", "auto"]
+configure_git["color.ui", "auto"]
 
-execute "set alias llog=log --date=local" do
-  command "git config --replace-all --global alias.llog 'log --date=local'"
-  user WS_USER
-end
+configure_git["apply.whitespace", "nowarn"]
 
-execute "set alias logwithtags=log --decorate=full" do
-  command "git config --replace-all --global alias.logwithtags 'log --decorate=full'"
-  user WS_USER
-end
+configure_git["branch.autosetuprebase", "always"]
+configure_git["push.default", "upstream"]
 
-execute "set alias lg" do
-  command "git config --replace-all --global alias.lg 'log --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset\" --abbrev-commit --date=relative'"
-  user WS_USER
-end
-
-execute "set alias last" do
-  command "git config --replace-all --global alias.last 'log -1 --pretty-format=\"%H\"'"
-  user WS_USER
-end
-
-execute "set alias hist" do
-  command "git config --replace-all --global alias.hist 'log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short'"
-  user WS_USER
-end
-
-execute "set alias rm-all" do
-  command "git config --replace-all --global alias.rm-all '! git ls-files --deleted | xargs git rm'"
-  user WS_USER
-end
-
-execute "set apply whitespace=nowarn" do
-  command "git config --global apply.whitespace nowarn"
-  user WS_USER
-end
-
-execute "set color branch=auto" do
-  command "git config --global color.branch auto"
-  user WS_USER
-end
-
-execute "set color diff=auto" do
-  command "git config --global color.diff auto"
-  user WS_USER
-end
-
-execute "set color interactive=auto" do
-  command "git config --global color.interactive auto"
-  user WS_USER
-end
-
-execute "set color status=auto" do
-  command "git config --global color.status auto"
-  user WS_USER
-end
-
-execute "set color ui=auto" do
-  command "git config --global color.ui auto"
-  user WS_USER
-end
-
-execute "set branch autosetuprebase=always" do
-  command "git config --global branch.autosetuprebase always"
-  user WS_USER
-end
-
-execute "set push default=upstream" do
-  command "git config --global push.default upstream"
-  user WS_USER
+gitconfig = File.join(node[:etc][:passwd][node[:current_user]][:dir], ".gitconfig")
+file gitconfig do
+  owner node[:current_user]
 end
