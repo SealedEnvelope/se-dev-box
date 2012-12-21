@@ -25,8 +25,6 @@ Attributes
 - `node['git']['user_signingkey']` - GPG key ID for .gitconfig
 - `node['github']['user']` - Github user name for .gitconfig
 - `node['github']['token']` - Github token for .gitconfig
-- `node['pandoc']['version']` - Pandoc version to install
-- `node['pandoc']['checksum']` - Checksum for Pandoc version
 
 Usage
 =====
