@@ -1,7 +1,7 @@
 pivotal_workstation_bash_it_custom_plugin "emacs.bash"
 
 # don't want these loaded automatically by bash_it, only if in emacs
-bash_it_custom_dir = ::File.join(::BASH_IT_DIR, "custom")
+bash_it_custom_dir = ::File.join(node["bash_it"]["dir"], "custom")
 template ::File.expand_path("emacs_shell_prompt.sh", bash_it_custom_dir) do
   source "emacs_shell_prompt.sh"
   owner node[:current_user]
