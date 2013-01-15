@@ -44,15 +44,16 @@ recipes:
 - se-dev-box::bash_it-usr_local_sbin_path
 - se-dev-box::bash_it-vagrant_helpers
 - se-dev-box::bashrc-source_bashprofile
+- se-dev-box::boxcryptor
 - se-dev-box::coreutils
 - se-dev-box::emacs
+- se-dev-box::git_config_global_defaults
 - se-dev-box::google-drive
 - se-dev-box::google-voice
-- se-dev-box::git_config_global_defaults
+- se-dev-box::gpgtools
 - se-dev-box::node_packages
 - se-dev-box::phantomjs
-- se-dev-box::boxcryptor
-- se-dev-box::gpgtools
+- se-dev-box::r
 node_attributes:
   git:
     user_name:
