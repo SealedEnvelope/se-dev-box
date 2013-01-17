@@ -21,6 +21,7 @@ recipes:
 - pivotal_workstation::function_keys
 - pivotal_workstation::gem_setup
 - pivotal_workstation::git
+- pivotal_workstation::gitx
 - pivotal_workstation::homebrew
 - pivotal_workstation::increase_shared_memory
 - pivotal_workstation::keyboard_preferences
