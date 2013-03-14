@@ -11,8 +11,8 @@ end
 dmg_package "Emacs" do
   app "Emacs"
   dmg_name "Emacs-24.2-universal-10.6.8"
-  source "http://bandwidth.porkrind.org/emacs-builds/Emacs-24.2-universal-10.6.8.dmg"
-  checksum "477bc9e180eabb2bc126e46227c3d063b222888505d398e175c0fae5777a7bd6"
+  source "http://emacsformacosx.com/emacs-builds/Emacs-24.3-universal-10.6.8.dmg"
+  checksum "92b3a6dd0a32b432f45ea925cfa34834c9ac9f7f0384c38775f6760f1e89365a"
   action :install
 end
 
