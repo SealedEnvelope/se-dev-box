@@ -42,3 +42,5 @@ This installs the [soloist](https://github.com/mkocher/soloist) gem, clones
  * https://github.com/SealedEnvelope/se-dev-box.git
 
 into `~/cookbooks`, and runs `soloist` against `~/cookbooks/soloistrc`.
+
+After initial installation, run `~/cookbooks/se-dev-box/installer` to update.
