@@ -7,7 +7,6 @@ cat > soloistrc <<EOF
 cookbook_paths:
 - $PWD
 recipes:
-- se-dev-box::rvm
 - pivotal_workstation::bash4
 - pivotal_workstation::bash_completion
 - pivotal_workstation::bash_it
@@ -28,6 +27,7 @@ recipes:
 - pivotal_workstation::locate_on
 - pivotal_workstation::menubar_preferences
 - pivotal_workstation::node_js
+- pivotal_workstation::rvm
 - pivotal_workstation::screen_sharing_app
 - pivotal_workstation::set_finder_show_all_hd_on_desktop
 - pivotal_workstation::skype
