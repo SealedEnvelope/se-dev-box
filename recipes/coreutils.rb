@@ -1,1 +1,1 @@
-brew_install "coreutils"
+brew "coreutils"

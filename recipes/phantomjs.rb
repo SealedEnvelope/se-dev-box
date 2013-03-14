@@ -1,1 +1,1 @@
-brew_install "phantomjs"
+brew "phantomjs"

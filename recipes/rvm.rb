@@ -5,11 +5,11 @@ execute "brew tap homebrew/dupes" do
   not_if "brew tap | grep homebrew/dupes"
 end
 
-brew_install "autoconf"
-brew_install "automake"
-brew_install "apple-gcc42"
-brew_install "libksba"
-brew_install "readline"
+brew "autoconf"
+brew "automake"
+brew "apple-gcc42"
+brew "libksba"
+brew "readline"
 
 include_recipe "pivotal_workstation::java"
 include_recipe "pivotal_workstation::git"
