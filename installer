@@ -31,12 +31,14 @@ Dir.chdir(cookbooks_dir)
 
 ["https://github.com/pivotal/pivotal_workstation.git",
  "https://github.com/opscode-cookbooks/dmg.git",
+ "https://github.com/kitchenplan/chef-osxdefaults.git",
  "https://github.com/SealedEnvelope/se-dev-box.git"].each do |cookbook|
   cookbook_dir = File.basename(cookbook, ".git")
+  cookbook_dir = "osxdefaults" if cookbook_dir == "chef-osxdefaults"
   if File.directory?(cookbook_dir)
     git_pull(cookbook_dir)
   else
-    system "git clone #{cookbook}"
+    system "git clone #{cookbook} #{cookbook_dir}"
   end
 end
 
