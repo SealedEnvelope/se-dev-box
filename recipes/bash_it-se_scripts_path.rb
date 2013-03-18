@@ -1,0 +1,1 @@
+pivotal_workstation_bash_it_custom_plugin "se_scripts_path.bash"
