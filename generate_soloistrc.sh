@@ -43,6 +43,7 @@ recipes:
 - se-dev-box::bash_it-bundler-exec
 - se-dev-box::bash_it-fix_prompt
 - se-dev-box::bash_it-home_bin_path
+- se-dev-box::bash_it-se_scripts_path
 - se-dev-box::bash_it-locale_vars
 - se-dev-box::bash_it-usr_local_sbin_path
 - se-dev-box::bash_it-vagrant_helpers
