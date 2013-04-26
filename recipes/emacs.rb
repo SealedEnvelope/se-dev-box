@@ -23,3 +23,12 @@ end
 link "/usr/bin/emacs" do
  to "/Applications/Emacs.app/Contents/MacOS/Emacs"
 end
+
+execute "move osx /usr/bin/emacsclient out of the way" do
+ command "mv /usr/bin/emacsclient /usr/bin/emacsclient.original"
+ not_if "[ -f /usr/bin/emacsclient.original ]"
+end
+
+link "/usr/bin/emacsclient" do
+ to "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+end
