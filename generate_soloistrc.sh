@@ -37,6 +37,7 @@ recipes:
 - pivotal_workstation::vagrant
 - pivotal_workstation::virtualbox
 - pivotal_workstation::xquartz
+- se-dev-box
 - se-dev-box::autoconf
 - se-dev-box::automake
 - se-dev-box::bash_it-plugins
@@ -49,6 +50,7 @@ recipes:
 - se-dev-box::bash_it-vagrant_helpers
 - se-dev-box::bashrc-source_bashprofile
 - se-dev-box::boxcryptor
+- se-dev-box::btsync
 - se-dev-box::coreutils
 - se-dev-box::emacs
 - se-dev-box::git_config_global_defaults
