@@ -30,7 +30,6 @@ recipes:
 - pivotal_workstation::rvm
 - pivotal_workstation::screen_sharing_app
 - pivotal_workstation::set_finder_show_all_hd_on_desktop
-- pivotal_workstation::skype
 - pivotal_workstation::sshd_on
 - pivotal_workstation::unix_essentials
 - pivotal_workstation::user_owns_usr_local
@@ -49,7 +48,6 @@ recipes:
 - se-dev-box::bash_it-usr_local_sbin_path
 - se-dev-box::bash_it-vagrant_helpers
 - se-dev-box::bashrc-source_bashprofile
-- se-dev-box::boxcryptor
 - se-dev-box::btsync
 - se-dev-box::coreutils
 - se-dev-box::emacs
