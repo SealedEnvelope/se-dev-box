@@ -9,7 +9,7 @@ execute "install BasicTeX" do
 end
 
 dmg_package "pandoc-#{node[:pandoc][:version]}" do
-  source "http://pandoc.googlecode.com/files/pandoc-1.9.4.2.dmg"
+  source "http://pandoc.googlecode.com/files/pandoc-#{node[:pandoc][:version]}.dmg"
   type "pkg"
   dmg_name "pandoc-#{node[:pandoc][:version]}"
   volumes_dir "pandoc #{node[:pandoc][:version]}"
