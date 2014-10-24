@@ -1,1 +1,0 @@
-alias vm='vagrant ssh'

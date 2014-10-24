@@ -1,1 +1,0 @@
-pivotal_workstation_bash_it_custom_plugin "usr_local_sbin_path.bash"

@@ -1,1 +1,0 @@
-pivotal_workstation_bash_it_custom_plugin "jon_aliases.bash"
