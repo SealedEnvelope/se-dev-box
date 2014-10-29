@@ -83,3 +83,10 @@ for app in ${apps[@]}; do
 done
 
 brew cleanup
+
+if [ ! -f "~/.bundler-exec.sh" ]; then
+  curl --silent https://raw.githubusercontent.com/gma/bundler-exec/master/bundler-exec.sh > ~/.bundler-exec.sh
+  if ! grep --quiet "bundler-exec.sh" ~/.bashrc ; then
+    printf "\nsource ~/.bundler-exec.sh\n" >> ~/.bashrc
+  fi
+fi
