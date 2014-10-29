@@ -27,15 +27,15 @@ fi
 
 brew update
 
-install_or_check_for_upgrade coreutils
-install_or_check_for_upgrade findutils
 install_or_check_for_upgrade bash
 install_or_check_for_upgrade bash-completion
 install_or_check_for_upgrade bash-git-prompt
+install_or_check_for_upgrade coreutils
+install_or_check_for_upgrade findutils
 install_or_check_for_upgrade gawk
-install_or_check_for_upgrade gnu-sed
 brew tap homebrew/dupes 2>/dev/null
 install_or_check_for_upgrade homebrew/dupes/grep
+install_or_check_for_upgrade gnu-sed
 
 install_or_check_for_upgrade chruby
 install_or_check_for_upgrade emacs --cocoa --with-gnutls
