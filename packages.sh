@@ -62,6 +62,7 @@ apps=(
   gpgtools
   grandperspective
   hipchat
+  java
   onepassword
   r
   simple-comic
