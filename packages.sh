@@ -91,3 +91,14 @@ if [ ! -f "~/.bundler-exec.sh" ]; then
     printf "\nsource ~/.bundler-exec.sh\n" >> ~/.bashrc
   fi
 fi
+
+npm_packages=(
+  grunt-cli
+  jshint
+  uglifyjs
+)
+for pkg in ${npm_packages[@]}; do
+  if ! npm list --global --silent $pkg >/dev/null ; then
+    npm install --global --quiet $pkg
+  fi
+done
