@@ -112,3 +112,6 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 
 # SSH on
 sudo systemsetup -getremotelogin | grep --quiet On || sudo systemsetup -setremotelogin on
+
+# Firewall on
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
