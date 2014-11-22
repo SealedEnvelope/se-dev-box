@@ -52,7 +52,9 @@ install_or_check_for_upgrade wine
 
 apps=(
   basictex
+  bbc-iplayer-downloads
   bittorrent-sync
+  chromecast
   dropbox
   evernote
   firefox
@@ -64,6 +66,7 @@ apps=(
   grandperspective
   hipchat
   java
+  minecraft
   onepassword
   r
   simple-comic
