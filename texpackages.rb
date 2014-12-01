@@ -17,6 +17,6 @@ unless system "which -s tlmgr"
   abort
 end
 
-%w(lastpage rsfs calrsfs siunitx tikz-qtree).each do |pkg|
+%w(lastpage rsfs calrsfs siunitx tikz-qtree enumitem).each do |pkg|
   system "tlmgr info #{pkg} | egrep --quiet '^installed: +Yes' || tlmgr install #{pkg}"
 end
