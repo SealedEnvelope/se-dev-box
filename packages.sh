@@ -26,6 +26,7 @@ if test ! $(which brew); then
 fi
 
 brew update
+install_or_check_for_upgrade brew-cask
 
 install_or_check_for_upgrade bash
 install_or_check_for_upgrade bash-completion
@@ -88,6 +89,7 @@ for app in ${apps[@]}; do
 done
 
 brew cleanup
+brew cask cleanup
 
 if [ ! -f "~/.bundler-exec.sh" ]; then
   curl --silent https://raw.githubusercontent.com/gma/bundler-exec/master/bundler-exec.sh > ~/.bundler-exec.sh
