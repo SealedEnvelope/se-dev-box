@@ -2,9 +2,9 @@
 
 install_or_check_for_upgrade() {
   if [ -d "/usr/local/Cellar/$(basename $1)" ]; then
-    ask_to_update $1
+    ask_to_update "$@"
   else
-    brew install $1
+    brew install "$@"
   fi
 }
 
@@ -13,7 +13,7 @@ ask_to_update() {
     read -p "Upgrade $1? [y|N] " -n 1 -r
     if [[ $REPLY =~ ^[Yy]$ ]]; then
       echo
-      brew upgrade $1
+      brew upgrade "$@"
     fi
   elif [[ -n $DEBUG ]]; then
     echo "$1 is up-to-date"
