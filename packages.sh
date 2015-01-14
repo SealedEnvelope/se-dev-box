@@ -71,6 +71,7 @@ apps=(
   minecraft
   onepassword
   r
+  screenhero
   simple-comic
   skim
   telephone
