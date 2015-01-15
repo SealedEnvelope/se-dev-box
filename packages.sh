@@ -71,6 +71,7 @@ apps=(
   minecraft
   onepassword
   r
+  sauce-connect
   screenhero
   simple-comic
   skim
