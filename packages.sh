@@ -48,7 +48,8 @@ install_or_check_for_upgrade phantomjs
 install_or_check_for_upgrade ruby-install
 install_or_check_for_upgrade tmux
 install_or_check_for_upgrade w3m
-install_or_check_for_upgrade wine
+
+install_or_check_for_upgrade aspell
 
 apps=(
   basictex
@@ -57,23 +58,16 @@ apps=(
   evernote
   firefox
   flash
-  free-ruler
   google-chrome
-  google-drive
   gpgtools
-  grandperspective
   hipchat
   java
   onepassword
-  r
-  simple-comic
-  skim
-  telephone
-  utorrent
   vagrant
   virtualbox
-  vlc
-  xquartz
+  rbenv
+  ruby-build
+  wget
 )
 brew tap caskroom/versions 2>/dev/null
 for app in ${apps[@]}; do
