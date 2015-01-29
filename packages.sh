@@ -74,6 +74,7 @@ apps=(
   sauce-connect
   screenhero
   simple-comic
+  slack
   skim
   telephone
   utorrent
