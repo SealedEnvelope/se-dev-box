@@ -47,6 +47,7 @@ install_or_check_for_upgrade mysql
 install_or_check_for_upgrade pandoc
 install_or_check_for_upgrade phantomjs
 install_or_check_for_upgrade ruby-install
+install_or_check_for_upgrade sox --with-lame
 install_or_check_for_upgrade tmux
 install_or_check_for_upgrade w3m
 install_or_check_for_upgrade wget
