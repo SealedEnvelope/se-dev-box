@@ -44,7 +44,6 @@ install_or_check_for_upgrade emacs --cocoa --with-gnutls
 install_or_check_for_upgrade git
 install_or_check_for_upgrade mackup
 install_or_check_for_upgrade mysql
-# install_or_check_for_upgrade node
 install_or_check_for_upgrade pandoc
 install_or_check_for_upgrade phantomjs
 install_or_check_for_upgrade ruby-install
