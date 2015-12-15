@@ -44,6 +44,7 @@ install_or_check_for_upgrade gnu-sed
 install_or_check_for_upgrade mackup
 install_or_check_for_upgrade mysql
 install_or_check_for_upgrade pandoc
+install_or_check_for_upgrade percona-toolkit
 install_or_check_for_upgrade phantomjs
 install_or_check_for_upgrade ruby-install
 install_or_check_for_upgrade sox --with-lame
