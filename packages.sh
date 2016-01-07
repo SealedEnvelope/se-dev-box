@@ -22,11 +22,9 @@ ask_to_update() {
 
 if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew install caskroom/cask/brew-cask
 fi
 
 brew update
-install_or_check_for_upgrade brew-cask
 
 install_or_check_for_upgrade bash
 install_or_check_for_upgrade bash-completion
@@ -57,8 +55,6 @@ install_or_check_for_upgrade wine
 apps=(
   basictex
   bbc-iplayer-downloads
-  # bittorrent-sync
-  chromecast
   dropbox
   evernote
   firefox
@@ -71,13 +67,13 @@ apps=(
   hipchat
   java
   minecraft
-  onepassword
+  1password
   r
   sauce-connect
   screenhero
-  simple-comic
   slack
   skim
+  techstoreclub-simple-comic
   telephone
   utorrent
   vagrant
@@ -85,6 +81,7 @@ apps=(
   vlc
   xquartz
 )
+brew tap caskroom/cask 2>/dev/null
 brew tap caskroom/versions 2>/dev/null
 for app in ${apps[@]}; do
   if [[ -z $(brew cask list | grep "${app}") ]]; then
