@@ -74,7 +74,6 @@ apps=(
   slack
   skim
   techstoreclub-simple-comic
-  telephone
   utorrent
   vagrant
   virtualbox
