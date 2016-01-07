@@ -23,6 +23,10 @@ end
  "siunitx",
  "tikz-qtree",
  "enumitem",
- "tikzmark"].each do |pkg|
+ "tikzmark",
+ "multicol",
+ "marginnote",
+ "sectsty",
+ "lstaddons"].each do |pkg|
   system "tlmgr info #{pkg} | egrep --quiet '^installed: +Yes' || tlmgr install #{pkg}"
 end
