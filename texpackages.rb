@@ -27,6 +27,7 @@ end
  "multicol",
  "marginnote",
  "sectsty",
+ "framed",
  "lstaddons"].each do |pkg|
   system "tlmgr info #{pkg} | egrep --quiet '^installed: +Yes' || tlmgr install #{pkg}"
 end
