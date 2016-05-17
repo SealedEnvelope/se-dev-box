@@ -26,6 +26,7 @@ fi
 
 brew update
 
+install_or_check_for_upgrade aspell
 install_or_check_for_upgrade bash
 install_or_check_for_upgrade bash-completion
 install_or_check_for_upgrade bash-git-prompt
