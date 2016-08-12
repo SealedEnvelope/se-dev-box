@@ -53,6 +53,8 @@ install_or_check_for_upgrade w3m
 install_or_check_for_upgrade wget
 install_or_check_for_upgrade wine
 
+brew upgrade
+
 apps=(
   basictex
   bbc-iplayer-downloads
