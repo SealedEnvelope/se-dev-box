@@ -20,3 +20,8 @@ check_rackspace_auth() {
   fi
 }
 check_rackspace_auth
+
+# append homebrew bash to list of shells and specify as user shell
+bash=/usr/local/bin/bash
+grep -q $bash /etc/shells || sudo sh -c "echo $bash >> /etc/shells"
+chsh -s $bash
