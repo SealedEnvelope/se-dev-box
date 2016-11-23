@@ -24,7 +24,7 @@ end
  "tikz-qtree",
  "enumitem",
  "tikzmark",
- "multicol",
+ # "multicol", not available in repository at 2016-11-23
  "marginnote",
  "sectsty",
  "framed",
