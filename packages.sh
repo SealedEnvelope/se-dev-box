@@ -40,6 +40,7 @@ install_or_check_for_upgrade git
 brew tap homebrew/dupes 2>/dev/null
 install_or_check_for_upgrade homebrew/dupes/grep
 install_or_check_for_upgrade gnu-sed
+install_or_check_for_upgrade jq
 install_or_check_for_upgrade mackup
 install_or_check_for_upgrade mysql
 install_or_check_for_upgrade pandoc
